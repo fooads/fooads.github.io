@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Refreshes the page every second -->
-        <!-- Delete before pushing -->
-        <!-- <meta http-equiv="refresh" content="1"> -->
-        <link rel="stylesheet" href="style.css">
-        <title>Fuad Samadov</title>
-    </head>
-    <body>
-        <h1>Hello, I am Fuad</h1>
-        <h2>Welcome to my resume website</h2>
-        <p>Education:</p>
-        <ol>
-            <li>Secondary education in Baku, Azerbaijan</li>
-            <li>High school exchange year in Kalkaska, Michigan</li>
-            <li>Bachelor's degree in Computer Science from KAIST, South Korea</li>
-        </ol>
+  <head>
+    <!-- Refreshes the page every second -->
+    <!-- Delete before pushing -->
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Fuad Samadov</title>
+  </head>
+  <body>
+    <script>
+      // Function to get the user's IP address using an external service
+      function getIpAddress() {
+        fetch("https://api64.ipify.org?format=json")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Your IP address is " + data.ip);
+            // You can send this information to your server for further processing
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+      // Call the function when the page loads
+      window.onload = getIpAddress;
+    </script>
+    <h1>Hello, I am Fuad</h1>
+    <h2>Welcome to my resume website</h2>
+    <p>Education:</p>
+    <ol>
+      <li>Secondary education in Baku, Azerbaijan</li>
+      <li>High school exchange year in Kalkaska, Michigan</li>
+      <li>Bachelor's degree in Computer Science from KAIST, South Korea</li>
+    </ol>
 
-        <p>Experience:</p>
-        <ul>
-            <li>Manufactruing & Service Systems Lab</li>
-            <li>Systems Analytics Lab</li>
-            <li>Finakle</li>
-        </ul>
-
-    </body>
+    <p>Experience:</p>
+    <ul>
+      <li>Manufactruing & Service Systems Lab</li>
+      <li>Systems Analytics Lab</li>
+      <li>Finakle</li>
+    </ul>
+  </body>
 </html>
