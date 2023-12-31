@@ -5,34 +5,23 @@
     <!-- Delete before pushing -->
     <!-- <meta http-equiv="refresh" content="1"> -->
     <link rel="stylesheet" href="style.css" />
-    <title>Screenshot1.jpg</title>
+    <title>Fuad Samadov</title>
   </head>
   <body>
-    <script>
-      function getIpAddress() {
-        fetch("https://api64.ipify.org?format=json")
-          .then((response) => response.json())
-          .then((data) => {
-            fetch("https://formspree.io/f/moqgqjan", {
-              method: "POST",
-              body: JSON.stringify({
-                email: "some@email.com",
-                message: `User ip is ${data.ip}`,
-              }),
-              headers: {
-                "Content-type": "application/json; charset=UTF-8",
-              },
-            });
+    <h1>Hello, I am Fuad</h1>
+    <h2>Welcome to my resume website</h2>
+    <p>Education:</p>
+    <ol>
+      <li>Secondary education in Baku, Azerbaijan</li>
+      <li>High school exchange year in Kalkaska, Michigan</li>
+      <li>Bachelor's degree in Computer Science from KAIST, South Korea</li>
+    </ol>
 
-            // You can send this information to your server for further processing
-          })
-          .catch((error) => console.error("Error:", error));
-      }
-      // Call the function when the page loads
-
-      window.onload = getIpAddress;
-    </script>
-
-    <img src="screenshot.png" />
+    <p>Experience:</p>
+    <ul>
+      <li>Manufactruing & Service Systems Lab</li>
+      <li>Systems Analytics Lab</li>
+      <li>Finakle</li>
+    </ul>
   </body>
 </html>
